@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giggle Garden</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <div class="top-bar">
+          <div class="lang-picker">
+            <label for="language-select">Language</label>
+            <select id="language-select">
+              <option value="en" selected>English</option>
+              <option value="te">తెలుగు</option>
+            </select>
+          </div>
+        </div>
+
+        <p class="badge">🌈 Tiny chaos • Big smiles</p>
+        <h1>Welcome to Giggle Garden!</h1>
+        <p class="intro">
+          This is a silly little world where bouncy blobs, rainbow giggles, and starry surprises all live together.
+        </p>
+
+        <div class="character-wrap">
+          <div id="character" class="character">🦄</div>
+          <div id="speech" class="speech">Hi! Tap a button and make me giggle!</div>
+        </div>
+
+        <div class="buttons">
+          <button data-action="bounce">Boop the bouncing blob</button>
+          <button data-action="rainbow">Tickle the rainbow</button>
+          <button data-action="star">Launch a silly star</button>
+        </div>
+
+        <section class="math-zone" aria-label="Math games">
+          <div class="section-head">
+            <h2>🧮 Math Games</h2>
+            <p>Pick a game and solve the silly number puzzles before the giggles zoom away!</p>
+          </div>
+
+          <div class="game-grid">
+            <article class="game-card">
+              <h3>➕ Addition Adventure</h3>
+              <p>Choose the correct sum and collect shiny stars.</p>
+              <button class="game-btn" data-game="addition">Start adding</button>
+              <div class="game-box">
+                <div id="addition-question" class="question">Press start to play!</div>
+                <div id="addition-answers" class="answer-grid"></div>
+                <div id="addition-status" class="status">Score: 0</div>
+              </div>
+            </article>
+
+            <article class="game-card">
+              <h3>➖ Subtraction Surprise</h3>
+              <p>Find the missing number before the monkey steals your answer.</p>
+              <button class="game-btn" data-game="subtraction">Start subtracting</button>
+              <div class="game-box">
+                <div id="subtraction-question" class="question">Press start to play!</div>
+                <div id="subtraction-answers" class="answer-grid"></div>
+                <div id="subtraction-status" class="status">Score: 0</div>
+              </div>
+            </article>
+
+            <article class="game-card">
+              <h3>⭐ Star Count</h3>
+              <p>Look at the stars and choose the correct number.</p>
+              <button class="game-btn" data-game="count-stars">Start counting</button>
+              <div class="game-box">
+                <div id="count-stars-question" class="question">Press start to play!</div>
+                <div id="count-stars-answers" class="answer-grid"></div>
+                <div id="count-stars-status" class="status">Score: 0</div>
+              </div>
+            </article>
+
+            <article class="game-card">
+              <h3>🎨 Color Match</h3>
+              <p>Pick the color named in the silly clue.</p>
+              <button class="game-btn" data-game="color-match">Start matching</button>
+              <div class="game-box">
+                <div id="color-match-question" class="question">Press start to play!</div>
+                <div id="color-match-answers" class="answer-grid"></div>
+                <div id="color-match-status" class="status">Score: 0</div>
+              </div>
+            </article>
+
+            <article class="game-card sudoku-card">
+              <h3>🧩 Mini Sudoku</h3>
+              <p>Fill the tiny grid so every row and box gets 1, 2, 3, and 4 once.</p>
+              <div class="sudoku-actions">
+                <button class="sudoku-btn" id="sudoku-new">New puzzle</button>
+                <button class="sudoku-btn" id="sudoku-check">Check it!</button>
+              </div>
+              <div id="sudoku-board" class="sudoku-board" aria-label="4 by 4 sudoku board"></div>
+              <div id="sudoku-number-pad" class="number-pad"></div>
+              <div id="sudoku-status" class="status">Pick a square and tap a number.</div>
+            </article>
+          </div>
+        </section>
+
+        <div class="qr-section">
+          <h3>📱 Share the Giggles!</h3>
+          <p>Scan this code to visit Giggle Garden!</p>
+          <div id="qr-code" class="qr-code"></div>
+        </div>
+
+        <p class="footer">Made for giggles, wiggles, and tiny adventures.</p>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
